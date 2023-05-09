@@ -5,7 +5,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 # Load the dataset
 from pathlib import Path
-
+@st.cache_data
 data_csv = Path(__file__).parents[1]  /'smart_collector/car_insurance.csv'
 data = pd.read_csv(data_csv)
 
@@ -55,6 +55,7 @@ my_pipeline = Pipeline(steps=[('preprocessor', preprocessor),
 my_pipeline.fit(data_used, data[['Price']])
 
 # Define the app
+@st.cache
 def app():
     st.title('Smart collector')
     st.write('input your car details and get your policy:')
