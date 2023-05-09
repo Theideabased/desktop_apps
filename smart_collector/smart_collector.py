@@ -4,9 +4,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
 
 # Load the dataset
-data_df= st.file_uploader('car_insurance.csv', type={"csv"})
-if data_df is not None:
-  data = pd.read_csv(data_df)
+
+  data = pd.read_csv('car_insurance.csv')
 
 features = ['Manufacturer','Model', 'Category','Mileage','Prod. year','Engine volume', 'Airbags']
 # get your features
