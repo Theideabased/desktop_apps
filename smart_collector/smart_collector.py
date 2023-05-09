@@ -6,7 +6,7 @@ from sklearn.preprocessing import OneHotEncoder
 # Load the dataset
 from pathlib import Path
 
-data_csv = Path(__file__).parents[1]  'car_insurance.csv'
+data_csv = Path(__file__).parents[1]  /'car_insurance.csv'
 data = pd.read_csv(data_csv)
 
 features = ['Manufacturer','Model', 'Category','Mileage','Prod. year','Engine volume', 'Airbags']
