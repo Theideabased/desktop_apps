@@ -86,11 +86,11 @@ def app():
         price = my_pipeline.predict(df_from_input)
         st.success(f'your policy is {price[0]:,.2f} naira.')
         if price >= 100000:
-            st.write('this vechicle has high risk and it is unacceptable')
+            st.write('this vechicle has a high risk and it is unacceptable')
         elif price >= 50000:
-            st.write('this vechicle has high risk but it is acceptable')
+            st.write('this vechicle has a high risk but it is acceptable')
         else:
-            st.write('this vechicle has low risk')
+            st.write('this vechicle has a low risk')
 
     
 if __name__ == '__main__':
