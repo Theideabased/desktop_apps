@@ -54,7 +54,7 @@ my_pipeline = Pipeline(steps=[('preprocessor', preprocessor),
 my_pipeline.fit(data_used, data[['Price']])
 
 # Define the app
-@st.cache
+@st.cache_resource
 def app():
     st.title('Smart collector')
     st.write('input your car details and get your policy:')
